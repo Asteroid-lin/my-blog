@@ -14,15 +14,31 @@ export default hopeTheme({
 
   logo: "/logo.svg",
 
-  repo: "fuzhengwei/xfg-resume-blog",
-
   docsDir: "src",
 
-  // navbar
   navbar,
 
   // sidebar
   sidebar,
+
+  // 导航栏配置 - 搜索框在中间，导航链接在右侧
+  navbarLayout: {
+    start: ["Brand"],
+    center: [],   // 导航链接在中间
+    end: ["Search", "Links"]      // 搜索框、外观切换、仓库链接在右侧
+  },
+
+  // 导航栏图标
+  navbarIcon: true,
+
+  // 导航栏自动隐藏
+  navbarAutoHide: "mobile",
+
+  // 隐藏主题切换按钮
+  themeColor: false,
+
+  // 隐藏全屏按钮
+  fullscreen: false,
 
   footer: "我的微信：fustack",
 
@@ -40,61 +56,25 @@ export default hopeTheme({
   },
 
   plugins: {
-    // You should generate and use your own comment service
-    // comment: {
-    //   provider: "Giscus",
-    //   repo: "vuepress-theme-hope/giscus-discussions",
-    //   repoId: "R_kgDOG_Pt2A",
-    //   category: "Announcements",
-    //   categoryId: "DIC_kwDOG_Pt2M4COD69",
-    // },
-
-    // All features are enabled for md, only preserve features you need here
     mdEnhance: {
       align: true,
       attrs: true,
       card: true,
 
-      // install chart.js before enabling it
-      // chart: true,
-
       codetabs: true,
       demo: true,
 
-      // install echarts before enabling it
-      // echarts: true,
-
       figure: true,
-
-      // install flowchart.ts before enabling it
-      // flowchart: true,
-
-      // gfm requires mathjax-full to provide tex support
-      // gfm: true,
 
       imgLazyload: true,
       imgSize: true,
       include: true,
 
-      // install katex before enabling it
-      // katex: true,
-
-      // install mathjax-full before enabling it
-      // mathjax: true,
-
       mark: true,
-
-      // install mermaid before enabling it
-      // mermaid: true,
 
       playground: {
         presets: ["ts", "vue"],
       },
-
-      // install reveal.js before enabling it
-      // revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
 
       stylize: [
         {
@@ -113,66 +93,6 @@ export default hopeTheme({
       sup: true,
       tabs: true,
       vPre: true,
-
-      // install @vue/repl before enabling it
-      // vuePlayground: true,
     },
-
-    // uncomment these if you want a pwa
-    // pwa: {
-    //   favicon: "/favicon.ico",
-    //   cacheHTML: true,
-    //   cachePic: true,
-    //   appendBase: true,
-    //   apple: {
-    //     icon: "/assets/icon/apple-icon-152.png",
-    //     statusBarColor: "black",
-    //   },
-    //   msTile: {
-    //     image: "/assets/icon/ms-icon-144.png",
-    //     color: "#ffffff",
-    //   },
-    //   manifest: {
-    //     icons: [
-    //       {
-    //         src: "/assets/icon/chrome-mask-512.png",
-    //         sizes: "512x512",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-mask-192.png",
-    //         sizes: "192x192",
-    //         purpose: "maskable",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-512.png",
-    //         sizes: "512x512",
-    //         type: "image/png",
-    //       },
-    //       {
-    //         src: "/assets/icon/chrome-192.png",
-    //         sizes: "192x192",
-    //         type: "image/png",
-    //       },
-    //     ],
-    //     shortcuts: [
-    //       {
-    //         name: "Demo",
-    //         short_name: "Demo",
-    //         url: "/md/",
-    //         icons: [
-    //           {
-    //             src: "/assets/icon/guide-maskable.png",
-    //             sizes: "192x192",
-    //             purpose: "maskable",
-    //             type: "image/png",
-    //           },
-    //         ],
-    //       },
-    //     ],
-    //   },
-    // },
   },
 });

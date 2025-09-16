@@ -1,1 +1,119 @@
-// place your custom styles here
+// 导航栏样式 - 搜索框居中，导航链接居右
+.vp-navbar {
+  .vp-navbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;  // 搜索框居中
+    
+    .vp-search {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .vp-navbar-end {
+    display: flex;
+    justify-content: flex-end;  // 导航链接居右
+    
+    .vp-nav-links {
+      margin-left: auto;
+    }
+  }
+  
+  // 移动端导航栏调整
+  @media (max-width: 768px) {
+    .vp-navbar-center {
+      justify-content: center;
+    }
+    
+    .vp-navbar-end {
+      justify-content: center;
+    }
+  }
+}
+
+// 导航链接居右对齐
+.vp-nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+// 导航项样式调整
+.nav-item {
+  display: flex;
+  align-items: center;
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: var(--vp-c-bg-soft);
+      color: var(--vp-c-brand-1);
+    }
+  }
+}
+
+// 下拉菜单居右对齐
+.vp-dropdown {
+  .vp-dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+}
+
+// 隐藏GitHub和主题切换按钮
+.vp-navbar-end {
+  // 隐藏GitHub仓库链接
+  .vp-repo {
+    display: none !important;
+  }
+  
+  // 隐藏主题切换按钮
+  #appearance-switch {
+    display: none !important;
+  }
+  
+  // 隐藏语言切换按钮
+  .vp-locale-select {
+    display: none !important;
+  }
+  
+  // 隐藏全屏按钮
+  .vp-fullscreen-button {
+    display: none !important;
+  }
+}
+
+// 确保搜索框正常显示
+.vp-navbar-center {
+  .vp-search {
+    display: flex !important;
+    align-items: center;
+  }
+}
+
+.vp-navbar-end {
+  .vp-search {
+    display: flex !important;
+  }
+}
+
+// 搜索按钮样式
+.vp-search-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: var(--vp-c-bg-soft);
+  }
+}
