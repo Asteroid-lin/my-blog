@@ -126,10 +126,10 @@ dist/
 .local
 
 # VuePress 特定文件
-/src/.vuepress/.temp/
-/src/.vuepress/.cache/
-/src/.vuepress/cache/
-/src/.vuepress/dist/
+src/.vuepress/.temp/
+src/.vuepress/.cache/
+src/.vuepress/cache/
+src/.vuepress/dist/
 
 # 构建产物文件
 *.html
