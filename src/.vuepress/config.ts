@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import theme from "./theme.js";
+import { searchPlugin } from "@vuepress/plugin-search";
 
 export default defineUserConfig({
   dest: "./dev-ops/nginx/html",
@@ -22,6 +23,19 @@ export default defineUserConfig({
       },
     },
   }),
+
+    plugins: [
+        searchPlugin({
+            locales: {
+                '/': {
+                    placeholder: 'Search',
+                },
+                '/zh/': {
+                    placeholder: '搜索',
+                },
+            },
+        }),
+    ],
 
   theme,
 
