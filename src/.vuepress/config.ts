@@ -7,8 +7,8 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "我的简历",
-  description: "关于我自己的学习成长经历",
+  title: "Leo's Tech Lab",
+  description: "个人技术成长档案与供应链架构实践",
 
   // 通过 Vite 配置抑制 Sass 警告
   bundler: viteBundler({

@@ -21,6 +21,13 @@ export default hopeTheme({
   // sidebar
   sidebar,
 
+  // 参考知识库页面采用固定的浅色文档阅读模式。
+  darkmode: "disable",
+
+  // 专栏页面由顶部 Navbar、左侧知识库目录和右侧当前页 TOC 组织，
+  // 不再在正文顶部重复显示路径面包屑。
+  breadcrumb: false,
+
   // 导航栏配置 - 搜索框在中间，导航链接在右侧
   navbarLayout: {
     start: ["Brand"],
@@ -40,7 +47,7 @@ export default hopeTheme({
   // 隐藏全屏按钮
   fullscreen: false,
 
-  footer: "我的微信：fustack",
+  footer: "Leo's Tech Lab · 持续记录系统理解与工程实践",
 
   displayFooter: true,
 
