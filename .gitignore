@@ -10,6 +10,7 @@ pnpm-debug.log*
 .vuepress/.temp/
 .vuepress/.cache/
 .vuepress/cache/
+src/.vuepress/.temp/pages/
 
 # 环境变量文件
 .env

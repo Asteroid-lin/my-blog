@@ -57,6 +57,7 @@ export default hopeTheme({
 
   plugins: {
     mdEnhance: {
+      mermaid: true,
       align: true,
       attrs: true,
       card: true,
