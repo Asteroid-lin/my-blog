@@ -1,39 +1,46 @@
-import { defineClientConfig } from "@vuepress/client";
-import { VPLink } from "D:/Project/my/Front/my-blog/node_modules/vuepress-shared/lib/client/index.js";
+import { Layout, NotFound, injectDarkMode, setupDarkMode, setupSidebarItems, scrollPromise } from "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/dist/bundle/exports/base.js";
 
-import { HopeIcon, Layout, NotFound, useScrollPromise, injectDarkmode, setupDarkmode, setupSidebarItems } from "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/lib/bundle/export.js";
+import { defineCatalogInfoGetter } from "D:/Project/my/Front/my-blog/node_modules/@vuepress/plugin-catalog/dist/client/index.js"
+import { h } from "vue"
+import { resolveComponent } from "vue"
+import { GlobalEncrypt, LocalEncrypt } from "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/dist/bundle/exports/encrypt.js";
 
-import { defineAutoCatalogIconComponent } from "D:/Project/my/Front/my-blog/node_modules/vuepress-plugin-auto-catalog/lib/client/index.js"
-import { GlobalEncrypt, LocalEncrypt } from "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/encrypt/export.js";
-import "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/lib/bundle/modules/encrypt/styles/all.scss"
+import "D:/Project/my/Front/my-blog/node_modules/@vuepress/helper/dist/client/styles/colors.css";
+import "D:/Project/my/Front/my-blog/node_modules/@vuepress/helper/dist/client/styles/normalize.css";
+import "D:/Project/my/Front/my-blog/node_modules/@vuepress/helper/dist/client/styles/sr-only.css";
+import "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/dist/client/styles/index.scss";
 
-import "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/lib/bundle/styles/all.scss";
+defineCatalogInfoGetter((meta) => {
+  const title = meta.title;
+  const shouldIndex = meta.index ?? true;
+  const icon = meta.icon;
 
-defineAutoCatalogIconComponent(HopeIcon);
+  return shouldIndex ? {
+    title,
+    content: icon ? () =>[h(resolveComponent("VPIcon"), { icon, sizing: "both" }), title] : null,
+    order: meta.order,
+    index: meta.index,
+  } : null;
+});
 
-export default defineClientConfig({
+export default {
   enhance: ({ app, router }) => {
     const { scrollBehavior } = router.options;
 
     router.options.scrollBehavior = async (...args) => {
-      await useScrollPromise().wait();
+      await scrollPromise.wait();
 
       return scrollBehavior(...args);
     };
 
     // inject global properties
-    injectDarkmode(app);
-
-    // provide HopeIcon as global component
-    app.component("HopeIcon", HopeIcon);
-    // provide VPLink as global component
-    app.component("VPLink", VPLink);
+    injectDarkMode(app);
 
     app.component("GlobalEncrypt", GlobalEncrypt);
     app.component("LocalEncrypt", LocalEncrypt);
   },
   setup: () => {
-    setupDarkmode();
+    setupDarkMode();
     setupSidebarItems();
 
   },
@@ -42,4 +49,4 @@ export default defineClientConfig({
     NotFound,
 
   }
-});
+};

@@ -165,4 +165,7 @@ export default sidebar({
   ],
   "/troubleshooting/": ["", "mysql/", "linux/", "java/", "production/", "performance/", "network/"],
   "/growth/": ["", "roadmap/", "books/", "courses/", "notes/", "career-thinking/"],
+
+  // 未单独配置的旧页面保持无侧边栏，避免回退匹配产生缺失配置警告。
+  "/": false,
 });

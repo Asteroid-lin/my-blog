@@ -10,15 +10,11 @@ export default defineUserConfig({
   title: "Leo's Tech Lab",
   description: "个人技术成长档案与供应链架构实践",
 
-  // 通过 Vite 配置抑制 Sass 警告
+  // Mermaid 的 ELK 渲染器是按需加载的大型独立 chunk，适当提高提示阈值。
   bundler: viteBundler({
     viteOptions: {
-      css: {
-        preprocessorOptions: {
-          scss: {
-            silenceDeprecations: ["legacy-js-api", "color-functions"],
-          },
-        },
+      build: {
+        chunkSizeWarningLimit: 1500,
       },
     },
   }),
