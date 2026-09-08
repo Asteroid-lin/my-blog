@@ -129,31 +129,37 @@ body {
   color: var(--blog-text);
 
   .vp-sidebar-links {
-    padding-top: 0.9rem;
-    padding-bottom: 2.5rem;
     font-size: 0.875rem;
   }
 
-  .vp-sidebar-group + .vp-sidebar-group {
-    margin-top: 0.75rem;
+  // 只给最外层目录保留顶部空间；嵌套列表不能继承大块上下内边距。
+  > .vp-sidebar-links {
+    padding-top: 0.45rem;
+    padding-bottom: 1rem;
+  }
+
+  .vp-sidebar-group > .vp-sidebar-links {
+    margin: 0 0 0.2rem 0.35rem;
+    padding: 0.08rem 0 0.28rem;
   }
 
   .vp-sidebar-header {
-    margin-bottom: 0.15rem;
-    padding: 0.4rem 0.75rem;
+    margin-bottom: 0.04rem;
+    padding: 0.25rem 0.65rem;
     color: var(--blog-text-strong);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
+    line-height: 1.4;
   }
 
   .vp-sidebar-link {
     width: calc(100% - 1.1rem);
-    margin: 0.08rem 0.55rem;
-    padding: 0.42rem 0.75rem;
+    margin: 0.02rem 0.55rem;
+    padding: 0.26rem 0.65rem;
     border-inline-start: 3px solid transparent;
     border-radius: 0 5px 5px 0;
     color: #536171;
-    line-height: 1.55;
+    line-height: 1.45;
 
     &:hover {
       background: #f4f7f6;
