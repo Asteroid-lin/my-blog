@@ -46,7 +46,7 @@ export default sidebar({
           text: "履约领域",
           collapsible: false,
           children: [
-            { text: "履约中心总览", link: "/business-system/supply-chain/oms/fulfillment" },
+            { text: "履约中心", link: "/business-system/supply-chain/oms/fulfillment" },
             { text: "寻仓与库存分配", link: "/business-system/supply-chain/oms/fulfillment#寻仓与库存分配" },
             { text: "拆单与合单", link: "/business-system/supply-chain/oms/fulfillment#拆单与合单" },
             { text: "快递匹配与供应商直发", link: "/business-system/supply-chain/oms/fulfillment#快递匹配与供应商直发" },
