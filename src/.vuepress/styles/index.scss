@@ -255,6 +255,29 @@ body {
     margin: 0.85rem 0;
   }
 
+  // Mermaid 把节点文字包在 p 里，会继承正文的行高和段距，
+  // 中文标签因此被裁进节点框。宽图同时限制在正文栏内。
+  .mermaid-wrapper {
+    max-width: 100%;
+  }
+
+  .mermaid-content {
+    max-width: 100%;
+    line-height: 1.4;
+    font-size: 14px;
+
+    p {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
   a {
     color: var(--blog-accent);
     text-underline-offset: 0.18em;

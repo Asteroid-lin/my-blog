@@ -1,14 +1,14 @@
-import { Layout, NotFound, injectDarkMode, setupDarkMode, setupSidebarItems, scrollPromise } from "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/dist/bundle/exports/base.js";
+import { Layout, NotFound, injectDarkMode, setupDarkMode, setupSidebarItems, scrollPromise } from "D:/Product/my/front/my-blog/node_modules/vuepress-theme-hope/dist/bundle/exports/base.js";
 
-import { defineCatalogInfoGetter } from "D:/Project/my/Front/my-blog/node_modules/@vuepress/plugin-catalog/dist/client/index.js"
+import { defineCatalogInfoGetter } from "D:/Product/my/front/my-blog/node_modules/@vuepress/plugin-catalog/dist/client/index.js"
 import { h } from "vue"
 import { resolveComponent } from "vue"
-import { GlobalEncrypt, LocalEncrypt } from "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/dist/bundle/exports/encrypt.js";
+import { GlobalEncrypt, LocalEncrypt } from "D:/Product/my/front/my-blog/node_modules/vuepress-theme-hope/dist/bundle/exports/encrypt.js";
 
-import "D:/Project/my/Front/my-blog/node_modules/@vuepress/helper/dist/client/styles/colors.css";
-import "D:/Project/my/Front/my-blog/node_modules/@vuepress/helper/dist/client/styles/normalize.css";
-import "D:/Project/my/Front/my-blog/node_modules/@vuepress/helper/dist/client/styles/sr-only.css";
-import "D:/Project/my/Front/my-blog/node_modules/vuepress-theme-hope/dist/client/styles/index.scss";
+import "D:/Product/my/front/my-blog/node_modules/@vuepress/helper/dist/client/styles/colors.css";
+import "D:/Product/my/front/my-blog/node_modules/@vuepress/helper/dist/client/styles/normalize.css";
+import "D:/Product/my/front/my-blog/node_modules/@vuepress/helper/dist/client/styles/sr-only.css";
+import "D:/Product/my/front/my-blog/node_modules/vuepress-theme-hope/dist/client/styles/index.scss";
 
 defineCatalogInfoGetter((meta) => {
   const title = meta.title;
