@@ -8,10 +8,10 @@ export default navbar([
     text: "架构设计",
     link: "/architecture/",
     children: [
-      { text: "系统设计", link: "/architecture/system-design/" },
-      { text: "分布式系统", link: "/architecture/distributed-system/" },
-      { text: "微服务", link: "/architecture/microservice/" },
-      { text: "数据库设计", link: "/architecture/database-design/" },
+      { text: "系统设计", link: "/architecture/system-design.html" },
+      { text: "分布式系统", link: "/architecture/distributed-system.html" },
+      { text: "微服务", link: "/architecture/microservice.html" },
+      { text: "数据库设计", link: "/architecture/database-design.html" },
     ],
   },
   {
@@ -39,6 +39,7 @@ export default navbar([
     text: "AI 探索",
     link: "/ai/",
     children: [
+      { text: "AI 知识库文档", link: "/ai/knowledge-base/" },
       { text: "AI Coding", link: "/ai/ai-coding/" },
       { text: "Prompt 工程", link: "/ai/prompt-engineering/" },
       { text: "企业 AI", link: "/ai/enterprise-ai/" },
